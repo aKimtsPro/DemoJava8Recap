@@ -1,0 +1,8 @@
+
+Créez une application représentant un constructeur/vendeur de verre.
+
+L'entreprise construit des verres à un taux de 10 verre par 10 millisecondes.
+L'entreprise vend des verres à un taux de 10 verre par 20 millisecondes.
+
+Faites en sorte que l'entreprise construisent 10_000 et vendent 8_000 verres.
+Vérifiez qu'à la fin de l'exécution l'entreprise ait bien un stock de 2_000 verres restants.

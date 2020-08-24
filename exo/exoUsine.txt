@@ -1,0 +1,8 @@
+Pour construire une Voiture on a besoin d'une Carcasse et d'un Moteur.
+
+Les Carcasses et les Moteurs se créent à partir d'UsineCarcasse et UsineMoteur qui demandent 
+un certain temps pour contruire chaque piece.
+Un Moteur demande entre 3 et 6 secondes pour être construit et une Carcasse prend entre 4 et 8 secondes.
+
+Lorsqu'on souhaite construire une Voiture, on demande a chaque usine de créer sa pièce et de l'entreposer. 
+On ne pourra continuer la construction que lorsque les 2 objets sont créés et entreposés. 

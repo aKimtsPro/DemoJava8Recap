@@ -1,0 +1,21 @@
+
+Exo 1)
+
+- ajouter une quantité de temps que prendra la tâche 
+pour être exécutée
+- une tache ne peut pas entrer en conflit avec l'exécution d'une autre
+- le jour actuel devra changer en conséquence.
+
+
+Exo 2.1)
+
+- Modifier l'application d'Agenda afin qu'on puisse programmer nos tâches
+à des heures précises d'une journée. 
+- Le jour actuel devient le moment actuel
+- plusieurs tâches peuvent être exécutées le même jour 
+tant qu'elles n'entrent pas en conflit
+
+Exo 2.2)
+
+- Créez un méthode calculant le temps passé sans exécuter de tâche
+pour un jour donné. 
