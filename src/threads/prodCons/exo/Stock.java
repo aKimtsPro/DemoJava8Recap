@@ -1,9 +1,11 @@
-package threads.prodCons;
+package threads.prodCons.exo;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.Stack;
 
 public class Stock extends JFrame implements ActionListener {
@@ -36,6 +38,8 @@ public class Stock extends JFrame implements ActionListener {
     private void setup()
     {
         this.setTitle("stock");
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         this.setPreferredSize(new Dimension(200,200));
         label.setFont(new Font("comic sans ms", Font.PLAIN, 30));
         this.getContentPane().setLayout(new FlowLayout());
@@ -88,9 +92,7 @@ public class Stock extends JFrame implements ActionListener {
     }
 
     private void startNewConsumer(){
-
         new Consumer(this).start();
-
     }
 
     private void startNewProducer(){

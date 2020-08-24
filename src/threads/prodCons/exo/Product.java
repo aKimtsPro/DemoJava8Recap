@@ -1,3 +1,3 @@
-package threads.prodCons;
+package threads.prodCons.exo;
 
 public class Product { }

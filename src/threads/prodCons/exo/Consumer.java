@@ -1,7 +1,9 @@
-package threads.prodCons;
+package threads.prodCons.exo;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class Consumer extends JFrame implements Runnable {
 
@@ -25,6 +27,14 @@ public class Consumer extends JFrame implements Runnable {
         this.getContentPane().setLayout(new FlowLayout());
         this.getContentPane().add(label);
         this.setLocation(300,100);
+
+        this.addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                thread.interrupt();
+                e.getWindow().dispose();
+            }
+        });
 
         this.pack();
     }
@@ -52,7 +62,7 @@ public class Consumer extends JFrame implements Runnable {
         }
         catch(InterruptedException ie)
         {
-            System.out.println("consumption interrupted");
+            System.out.println("consumption stopped");
         }
     }
 

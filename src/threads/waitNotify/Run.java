@@ -1,4 +1,4 @@
-package threads.exo.waitNotify;
+package threads.waitNotify;
 
 public class Run {
 
