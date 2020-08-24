@@ -66,7 +66,7 @@ public class ChatBox extends JFrame implements ConversationListener, ActionListe
     }
 
     private JLabel setupLabel(Message message){
-        JLabel label = new JLabel( user.getNom() + " - " + message.getText() );
+        JLabel label = new JLabel("<html>"+ user.getNom() + " - " + message.getText()+"</html>" );
         label.setBackground(message.getUser().getColor());
         label.setOpaque(true);
         label.setFont(usedFont);
