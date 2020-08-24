@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class Consumer extends JFrame implements Runnable {
 
@@ -44,17 +45,16 @@ public class Consumer extends JFrame implements Runnable {
         try{
             while(true)
             {
-                synchronized (s){
+                synchronized (s) {
                     if (s.isEmpty()) {
-                            turnOff();
-                            while (s.isEmpty())
-                                s.wait();
-                            turnOn();
-
+                        turnOff();
+                        s.wait();
+                        turnOn();
                     }
 
                     s.consume();
                     s.notify();
+
                 }
                 Thread.sleep(700);
 

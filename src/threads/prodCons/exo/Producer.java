@@ -49,10 +49,8 @@ public class Producer extends JFrame implements Runnable {
 
                     if (s.isAtCapacity()) {
                         turnOff();
-                        while (s.isAtCapacity())
-                            s.wait();
+                        s.wait();
                         turnOn();
-
                     }
 
                     s.add(new Product());
