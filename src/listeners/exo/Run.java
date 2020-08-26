@@ -17,10 +17,6 @@ public class Run {
         ChatBox c1 = new ChatBox(leo, convo);
         ChatBox c2 = new ChatBox(lea, convo);
         ChatBox c3 = new ChatBox(lee, convo);
-
-
-
-
     }
 
 }

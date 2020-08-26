@@ -60,13 +60,12 @@ public class ChatBox extends JFrame implements ConversationListener, ActionListe
 
     @Override
     public void onMessageAdded(Message added) {
-        System.out.println("message recieved from " + added.getUser().getNom());
         messagePanel.add( setupLabel(added) );
         this.setVisible(true);
     }
 
     private JLabel setupLabel(Message message){
-        JLabel label = new JLabel("<html>"+ user.getNom() + " - " + message.getText()+"</html>" );
+        JLabel label = new JLabel("<html>"+ message.getUser().getNom() + " - " + message.getText()+"</html>" );
         label.setBackground(message.getUser().getColor());
         label.setOpaque(true);
         label.setFont(usedFont);
